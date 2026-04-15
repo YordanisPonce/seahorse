@@ -7,201 +7,464 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
+        :root {
+            --bg-main: #0d2b5c;
+            --bg-soft: rgba(255, 255, 255, 0.06);
+            --bg-card: rgba(255, 255, 255, 0.08);
+            --border-soft: rgba(255, 255, 255, 0.14);
+            --text-main: #ffffff;
+            --text-soft: rgba(255, 255, 255, 0.82);
+            --accent: #7db3ff;
+            --accent-2: #c9defd;
+            --shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #0d2b5c;
-            /* azul tipo PDF */
-            color: #fff;
+            color: var(--text-main);
+            background:
+                radial-gradient(circle at top right, rgba(74, 144, 226, 0.22), transparent 28%),
+                radial-gradient(circle at bottom left, rgba(255, 255, 255, 0.08), transparent 22%),
+                linear-gradient(180deg, #10366f 0%, #0d2b5c 45%, #0a234a 100%);
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: auto;
-            padding: 40px 20px;
+            padding: 48px 20px 60px;
         }
 
         .header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 38px;
+            padding: 28px 24px 34px;
+            border: 1px solid var(--border-soft);
+            border-radius: 24px;
+            background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(10px);
         }
 
         .logo-placeholder {
-            width: 200px;
-            height: 120px;
-            margin: 0 auto 20px;
+            width: 220px;
+            min-height: 130px;
+            margin: 0 auto 22px;
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+
+        .logo-placeholder img {
+            max-width: 220px;
+            max-height: 130px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .logo-note {
+            border: 1px dashed rgba(255,255,255,.28);
+            border-radius: 16px;
+            width: 220px;
+            height: 130px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
             font-size: 12px;
-            opacity: 0.7;
+            color: rgba(255,255,255,.65);
+            padding: 12px;
         }
 
         h1 {
             margin: 0;
-            font-size: 28px;
+            font-size: 34px;
+            line-height: 1.15;
+            letter-spacing: .3px;
         }
 
         h2 {
-            margin: 10px 0;
-            font-size: 20px;
-            font-weight: normal;
+            margin: 10px 0 0;
+            font-size: 21px;
+            font-weight: 400;
+            color: var(--accent-2);
         }
 
-        .section {
-            margin-bottom: 40px;
-        }
-
-        .card {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-
-        .title {
-            font-size: 20px;
-            margin-bottom: 10px;
-            color: #7db3ff;
+        .hero-subtitle {
+            margin-top: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #ffffff;
         }
 
         .small {
+            font-size: 15px;
+            color: var(--text-soft);
+            margin: 12px 0 0;
+            line-height: 1.7;
+        }
+
+        .section {
+            margin-bottom: 32px;
+        }
+
+        .card {
+            background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.05));
+            border: 1px solid var(--border-soft);
+            padding: 24px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(8px);
+        }
+
+        .title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 22px;
+            margin-bottom: 16px;
+            color: var(--accent);
+            font-weight: 700;
+            letter-spacing: .2px;
+        }
+
+        .title svg,
+        .day-title svg,
+        .meta-item svg {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+            stroke: currentColor;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .info-item {
+            background: rgba(255,255,255,.04);
+            border: 1px solid rgba(255,255,255,.1);
+            border-radius: 16px;
+            padding: 18px;
+        }
+
+        .info-item strong {
+            display: block;
+            margin-bottom: 8px;
+            color: #fff;
+            font-size: 15px;
+        }
+
+        .info-item p {
+            margin: 0;
+            color: var(--text-soft);
+            line-height: 1.65;
             font-size: 14px;
-            opacity: 0.9;
         }
 
-        ul {
-            padding-left: 20px;
+        .program-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
         }
 
-        li {
+        .day-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .day-card::before {
+            content: "";
+            position: absolute;
+            inset: 0 auto 0 0;
+            width: 5px;
+            border-radius: 20px;
+            background: linear-gradient(180deg, #7db3ff, #c9defd);
+        }
+
+        .day-card.day-blue::before {
+            background: linear-gradient(180deg, #4fa4ff, #8cd0ff);
+        }
+
+        .day-card.day-purple::before {
+            background: linear-gradient(180deg, #a978ff, #d2bbff);
+        }
+
+        .day-card.day-green::before {
+            background: linear-gradient(180deg, #4ed49a, #99f0c8);
+        }
+
+        .day-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 19px;
+            font-weight: 700;
             margin-bottom: 6px;
+            padding-left: 6px;
         }
 
-        .day {
-            margin-top: 20px;
+        .day-subtitle {
+            color: var(--accent-2);
+            margin: 0 0 16px;
+            font-size: 15px;
+            padding-left: 6px;
+        }
+
+        ul.schedule {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul.schedule li {
+            padding: 10px 0 10px 18px;
+            border-bottom: 1px solid rgba(255,255,255,.08);
+            position: relative;
+            color: var(--text-soft);
+            line-height: 1.5;
+            font-size: 14px;
+        }
+
+        ul.schedule li:last-child {
+            border-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        ul.schedule li::before {
+            content: "";
+            width: 7px;
+            height: 7px;
+            border-radius: 999px;
+            background: var(--accent);
+            position: absolute;
+            left: 0;
+            top: 17px;
+            box-shadow: 0 0 0 4px rgba(125, 179, 255, 0.12);
+        }
+
+        .contact-box p {
+            margin: 0;
+            color: var(--text-soft);
+            line-height: 1.9;
+            font-size: 15px;
+        }
+
+        .meta-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+            margin-top: 18px;
+        }
+
+        .meta-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 14px;
+            border-radius: 999px;
+            background: rgba(255,255,255,.06);
+            border: 1px solid rgba(255,255,255,.12);
+            color: var(--text-soft);
+            font-size: 14px;
         }
 
         .footer {
             text-align: center;
-            margin-top: 50px;
+            margin-top: 36px;
             font-size: 14px;
-            opacity: 0.8;
+            color: rgba(255,255,255,.72);
+        }
+
+        @media (max-width: 900px) {
+            .info-grid,
+            .program-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+            .title {
+                font-size: 20px;
+            }
         }
     </style>
 </head>
 
 <body>
-
     <div class="container">
 
-        <!-- HEADER -->
         <div class="header">
-
-            <!-- 🔴 AQUI VA TU FOTO / LOGO -->
             <div class="logo-placeholder">
-                <img src="{{ asset('images/unnamed.png') }}" style="max-width:200px;">
+                {{-- OPCIÓN 1: si ya tienes la imagen --}}
+                <img src="{{ asset('images/unnamed.png') }}" alt="Logo Congreso APDPE">
+
+                {{-- OPCIÓN 2: si quieres dejar el espacio temporalmente, comenta el img de arriba y usa esto --}}
+                {{--
+                <div class="logo-note">
+                    Aquí va la imagen / logo del congreso
+                </div>
+                --}}
             </div>
 
             <h1>XIX Congreso Anual APDPE</h1>
             <h2>25 Aniversario</h2>
-            <h2>“Representación, Legitimidad y Futuro”</h2>
+            <div class="hero-subtitle">“Representación, Legitimidad y Futuro”</div>
 
-            <p class="small">📍 Murcia, 16, 17 y 18 de Abril 2026</p>
+            <div class="meta-row">
+                <div class="meta-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8">
+                        <path d="M8 2v4M16 2v4M3 10h18M5 6h14a2 2 0 0 1 2 2v11a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V8a2 2 0 0 1 2-2Z"/>
+                    </svg>
+                    Murcia, 16, 17 y 18 de abril de 2026
+                </div>
+
+                <div class="meta-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8">
+                        <path d="M12 21s6-5.2 6-11a6 6 0 1 0-12 0c0 5.8 6 11 6 11Z"/>
+                        <circle cx="12" cy="10" r="2.5"/>
+                    </svg>
+                    Hotel Nelva · Murcia
+                </div>
+            </div>
+
             <p class="small">
                 AUDITORIO: HOTEL NELVA<br>
                 Avenida Primero de Mayo 5, 30006 Murcia
             </p>
         </div>
 
-        <!-- INFO GENERAL -->
         <div class="section card">
-            <div class="title">Información del evento</div>
+            <div class="title">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8">
+                    <path d="M4 19h16M6 17V7m6 10V5m6 12v-8"/>
+                </svg>
+                Información del evento
+            </div>
 
-            <p><strong>Fechas:</strong> 16, 17 y 18 de abril de 2026</p>
+            <div class="info-grid">
+                <div class="info-item">
+                    <strong>Fechas</strong>
+                    <p>16, 17 y 18 de abril de 2026</p>
+                </div>
 
-            <p><strong>Ubicación:</strong><br>
-                Hotel Nelva<br>
-                Avenida Primero de Mayo, 5<br>
-                30006 Murcia
-            </p>
+                <div class="info-item">
+                    <strong>Ubicación</strong>
+                    <p>Hotel Nelva<br>Avenida Primero de Mayo, 5<br>30006 Murcia</p>
+                </div>
 
-            <p><strong>Organiza:</strong><br>
-                APDPE (Asociación Profesional de Detectives Privados de España)
-            </p>
+                <div class="info-item">
+                    <strong>Organiza</strong>
+                    <p>APDPE (Asociación Profesional de Detectives Privados de España)</p>
+                </div>
+            </div>
         </div>
 
-        <!-- PROGRAMA -->
         <div class="section">
-
-            <div class="title">📅 Programa del Congreso</div>
-
-            <!-- JUEVES -->
-            <div class="card day">
-                <strong>🔵 Jueves, 16 de abril de 2026</strong><br>
-                1ª Jornada: Talento y Herramientas
-
-                <ul>
-                    <li>09:00 – Acreditaciones</li>
-                    <li>09:30 – Inauguración</li>
-                    <li>10:00 – Mesa redonda: “El detective ayer y hoy”</li>
-                    <li>11:30 – Café / Networking</li>
-                    <li>12:00 – Ponencia: “La investigación digital”</li>
-                    <li>12:50 – Innovación: “Registra todo, escribe nada”</li>
-                    <li>13:30 – Ponencia técnica</li>
-                    <li>14:30 – Comida</li>
-                    <li>16:30 – Ruta Gastronómica Misteriosa</li>
-                    <li>20:30 – Cóctel 25 Aniversario</li>
-                </ul>
+            <div class="title">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8">
+                    <path d="M8 2v4M16 2v4M3 10h18M5 6h14a2 2 0 0 1 2 2v11a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V8a2 2 0 0 1 2-2Z"/>
+                </svg>
+                Programa del Congreso
             </div>
 
-            <!-- VIERNES -->
-            <div class="card day">
-                <strong>🟣 Viernes, 17 de abril de 2026</strong><br>
-                2ª Jornada: Visión Sectorial y Jurídica
+            <div class="program-grid">
+                <div class="card day-card day-blue">
+                    <div class="day-title">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8">
+                            <path d="M12 3v18M3 12h18"/>
+                        </svg>
+                        Jueves, 16 de abril de 2026
+                    </div>
+                    <p class="day-subtitle">1ª Jornada: Talento y Herramientas</p>
 
-                <ul>
-                    <li>10:00 – Mesa redonda: desaparecidos</li>
-                    <li>11:30 – Café / Networking</li>
-                    <li>12:00 – Ponencia jurídica</li>
-                    <li>12:50 – Blockchain y prueba digital</li>
-                    <li>13:40 – Innovación genética</li>
-                    <li>14:30 – Comida + Mesa especial</li>
-                    <li>18:00 – Clausura oficial</li>
-                    <li>21:30 – Cena de gala</li>
-                </ul>
+                    <ul class="schedule">
+                        <li>09:00 – Acreditaciones</li>
+                        <li>09:30 – Inauguración</li>
+                        <li>10:00 – Mesa redonda: “El detective ayer y hoy”</li>
+                        <li>11:30 – Café / Networking</li>
+                        <li>12:00 – Ponencia: “La investigación digital”</li>
+                        <li>12:50 – Innovación: “Registra todo, escribe nada”</li>
+                        <li>13:30 – Ponencia técnica</li>
+                        <li>14:30 – Comida</li>
+                        <li>16:30 – Ruta Gastronómica Misteriosa</li>
+                        <li>20:30 – Cóctel 25 Aniversario</li>
+                    </ul>
+                </div>
+
+                <div class="card day-card day-purple">
+                    <div class="day-title">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8">
+                            <path d="M12 3v18M3 12h18"/>
+                        </svg>
+                        Viernes, 17 de abril de 2026
+                    </div>
+                    <p class="day-subtitle">2ª Jornada: Visión Sectorial y Jurídica</p>
+
+                    <ul class="schedule">
+                        <li>10:00 – Mesa redonda: desaparecidos</li>
+                        <li>11:30 – Café / Networking</li>
+                        <li>12:00 – Ponencia jurídica</li>
+                        <li>12:50 – Blockchain y prueba digital</li>
+                        <li>La problemática de la ciberseguridad en los despachos de Detectives Privados</li>
+                        <li>13:40 – Innovación genética</li>
+                        <li>14:30 – Comida + Mesa especial</li>
+                        <li>18:00 – Clausura oficial</li>
+                        <li>21:30 – Cena de gala</li>
+                    </ul>
+                </div>
+
+                <div class="card day-card day-green" style="grid-column: 1 / -1;">
+                    <div class="day-title">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8">
+                            <path d="M12 3v18M3 12h18"/>
+                        </svg>
+                        Sábado, 18 de abril de 2026
+                    </div>
+                    <p class="day-subtitle">Asamblea General Ordinaria APDPE</p>
+
+                    <ul class="schedule">
+                        <li>10:00 – 14:00 Asamblea General APDPE</li>
+                    </ul>
+                </div>
             </div>
-
-            <!-- SABADO -->
-            <div class="card day">
-                <strong>🟢 Sábado, 18 de abril de 2026</strong>
-
-                <ul>
-                    <li>10:00 – 14:00 Asamblea General APDPE</li>
-                </ul>
-            </div>
-
         </div>
 
-        <!-- CONTACTO -->
-        <div class="section card">
-            <div class="title">📞 Contacto</div>
+        <div class="section card contact-box">
+            <div class="title">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 3 5.18 2 2 0 0 1 5.06 3h3a2 2 0 0 1 2 1.72l.34 2.27a2 2 0 0 1-.57 1.73l-1.3 1.3a16 16 0 0 0 6.17 6.17l1.3-1.3a2 2 0 0 1 1.73-.57l2.27.34A2 2 0 0 1 22 16.92Z"/>
+                </svg>
+                Contacto
+            </div>
 
             <p>
                 APDPE<br>
                 Pasaje Dolores, 16 Oficina 3 – Madrid<br>
-                📞 917 581 399<br>
-                📧 info@apdpe.es<br>
-                🌐 www.apdpe.es
+                917 581 399<br>
+                info@apdpe.es<br>
+                www.apdpe.es
             </p>
         </div>
 
         <div class="footer">
             © Congreso APDPE 2026
         </div>
-
     </div>
-
 </body>
 
 </html>
