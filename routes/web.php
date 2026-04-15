@@ -7,4 +7,4 @@ Route::get('/', function () {
     return redirect('/admin');
 });
 
-Route::get('/visit/{token}', TrackVisitController::class)->name('visit.track');
+Route::get('/{token}', TrackVisitController::class)->name('visit.track');
