@@ -9,8 +9,9 @@ class TrackVisitController extends Controller
 {
     public function __invoke(Request $request)
     {
+        $token =  $request->route('token', 'víctima');
         TrackedVisit::create([
-            'token' => $request->route('token', 'víctima'),
+            'token' => $token,
 
             'ip' => $request->ip(),
             'ips' => $request->ips(),
