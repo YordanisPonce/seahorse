@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 
 class TrackVisitController extends Controller
 {
-    public function __invoke(Request $request, string $token)
+    public function __invoke(Request $request)
     {
         TrackedVisit::create([
-            'token' => $token,
+            'token' => $request->route('token', 'víctima'),
 
             'ip' => $request->ip(),
             'ips' => $request->ips(),
