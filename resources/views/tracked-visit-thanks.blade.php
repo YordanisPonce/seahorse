@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Congreso APDPE</title>
+    <title>XIX Congreso Anual APDPE</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
@@ -13,7 +13,7 @@
             --bg-card: rgba(255, 255, 255, 0.08);
             --border-soft: rgba(255, 255, 255, 0.14);
             --text-main: #ffffff;
-            --text-soft: rgba(255, 255, 255, 0.82);
+            --text-soft: rgba(255, 255, 255, 0.84);
             --accent: #7db3ff;
             --accent-2: #c9defd;
             --shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
@@ -34,7 +34,7 @@
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 1120px;
             margin: auto;
             padding: 48px 20px 60px;
         }
@@ -42,7 +42,7 @@
         .header {
             text-align: center;
             margin-bottom: 38px;
-            padding: 28px 24px 34px;
+            padding: 32px 24px 36px;
             border: 1px solid var(--border-soft);
             border-radius: 24px;
             background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
@@ -51,8 +51,8 @@
         }
 
         .logo-placeholder {
-            width: 220px;
-            min-height: 130px;
+            width: 240px;
+            min-height: 140px;
             margin: 0 auto 22px;
             display: flex;
             align-items: center;
@@ -60,8 +60,8 @@
         }
 
         .logo-placeholder img {
-            max-width: 220px;
-            max-height: 130px;
+            max-width: 240px;
+            max-height: 140px;
             object-fit: contain;
             display: block;
         }
@@ -69,8 +69,8 @@
         .logo-note {
             border: 1px dashed rgba(255,255,255,.28);
             border-radius: 16px;
-            width: 220px;
-            height: 130px;
+            width: 240px;
+            height: 140px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -82,14 +82,14 @@
 
         h1 {
             margin: 0;
-            font-size: 34px;
+            font-size: 36px;
             line-height: 1.15;
             letter-spacing: .3px;
         }
 
         h2 {
             margin: 10px 0 0;
-            font-size: 21px;
+            font-size: 22px;
             font-weight: 400;
             color: var(--accent-2);
         }
@@ -105,7 +105,7 @@
             font-size: 15px;
             color: var(--text-soft);
             margin: 12px 0 0;
-            line-height: 1.7;
+            line-height: 1.75;
         }
 
         .section {
@@ -165,7 +165,7 @@
         .info-item p {
             margin: 0;
             color: var(--text-soft);
-            line-height: 1.65;
+            line-height: 1.7;
             font-size: 14px;
         }
 
@@ -229,7 +229,7 @@
             border-bottom: 1px solid rgba(255,255,255,.08);
             position: relative;
             color: var(--text-soft);
-            line-height: 1.5;
+            line-height: 1.55;
             font-size: 14px;
         }
 
@@ -255,14 +255,14 @@
             margin-top: 4px;
             color: #ffffff;
             font-weight: 600;
-            line-height: 1.5;
+            line-height: 1.55;
         }
 
         .speaker {
             display: inline-block;
-            margin-top: 4px;
-            color: rgba(255,255,255,.78);
-            line-height: 1.55;
+            margin-top: 5px;
+            color: rgba(255,255,255,.82);
+            line-height: 1.65;
             font-size: 13px;
         }
 
@@ -331,6 +331,11 @@
         <div class="header">
             <div class="logo-placeholder">
                 <img src="{{ asset('images/unnamed.png') }}" alt="Logo Congreso APDPE">
+                {{--
+                <div class="logo-note">
+                    Aquí va la imagen / logo del congreso
+                </div>
+                --}}
             </div>
 
             <h1>XIX Congreso Anual APDPE</h1>
@@ -405,58 +410,65 @@
                     <p class="day-subtitle">1ª Jornada: Talento y Herramientas</p>
 
                     <ul class="schedule">
-                        <li><strong>09:00 – Acreditaciones</strong></li>
+                        <li><strong>09:00 - Acreditaciones</strong></li>
 
                         <li>
                             <strong>09:30 – Inauguración</strong><br>
-                            <span class="speaker">-D. Antonio Labrador Barquilla</span><br>
-                            <span class="speaker">-D. Francisco Lucas Ayala</span><br>
-                            <span class="speaker">-D. Antonio José Gambín</span><br>
-                            <span class="speaker">-D. Francisco Pulido Catalán</span><br>
-                            <span class="speaker">-D. Jorge Salgueiro Rodríguez</span>
+                            <span class="speaker">-D. Antonio Labrador Barquilla. Presidente APDPE</span><br>
+                            <span class="speaker">-D. Francisco Lucas Ayala. Delegado del Gobierno de la Región de Murcia</span><br>
+                            <span class="speaker">-D. Antonio José Gambin. Jefe Regional de Operaciones. Policía Nacional de Murcia</span><br>
+                            <span class="speaker">-D. Francisco Pulido Catalán. Coronel Jefe de la Comandancia de Murcia</span><br>
+                            <span class="speaker">-D. Jorge Salgueiro Rodríguez. Asesor APDPE</span>
                         </li>
 
                         <li>
                             <strong>10:00 – Mesa redonda</strong><br>
                             <span class="talk">“El detective ayer y hoy: del oficio tradicional al entorno actual”</span><br>
-                            <span class="speaker">-D. Francisco Iglesias</span><br>
-                            <span class="speaker">-D. Luis Iglesias Asuar</span><br>
-                            <span class="speaker">-D. Cristian García</span><br>
-                            <span class="speaker">-D. Gabriel Sánchez</span><br>
-                            <span class="speaker">-D. Javier Regidor</span>
+                            <span class="speaker">-D. Francisco Iglesias. Delegado APDPE Murcia</span><br>
+                            <span class="speaker">-D. Luis Iglesias Asuar. Detective Privado</span><br>
+                            <span class="speaker">-D. Cristian Garcia. Detective Privado</span><br>
+                            <span class="speaker">-D. Gabriel Sanchez. Detective Privado</span><br>
+                            <span class="speaker">-D. Javier Regidor. APDPE</span>
                         </li>
 
-                        <li><strong>11:30 – Café / Networking</strong></li>
+                        <li><strong>11:30 – Café / networking</strong></li>
 
                         <li>
                             <strong>12:00 – Ponencia</strong><br>
                             <span class="talk">“La investigación digital”</span><br>
-                            <span class="speaker">-D. Juan Lorenzo del Real Jiménez</span><br>
-                            <span class="speaker">-D. Antonio Suárez Yáñez</span>
+                            <span class="speaker">-D. Juan Lorenzo del Real Jiménez. Jefatura de Información - Guardia Civil</span><br>
+                            <span class="speaker">-D. Antonio Suárez Yañez. Coronel de Seprose (GC)</span>
                         </li>
 
                         <li>
                             <strong>12:50 – Ventana de innovación</strong><br>
                             <span class="talk">“Registra todo, escribe nada”</span><br>
-                            <span class="speaker">-D. Axel Toribio</span>
+                            <span class="speaker">-D. Axel Toribio. Representante de Plaud en España</span>
                         </li>
 
                         <li>
                             <strong>13:30 – Ponencia técnica</strong><br>
                             <span class="talk">“Escenario híbrido de investigación”</span><br>
-                            <span class="speaker">-D. Fernando Mairata de Anduiza</span>
+                            <span class="speaker">-D. Fernando Mairata de Anduiza. Presidente de PETEC</span>
                         </li>
 
                         <li><strong>14:30 – Comida (Hotel Nelva)</strong></li>
 
                         <li>
-                            <strong>16:30 – Ruta Gastronómica Misteriosa</strong><br>
-                            <span class="speaker">Degustación de tapas locales, recorrido por Murcia, concurso fotográfico, dulce típico o helado, foto grupal y premio</span>
+                            <strong>16:30 – Inicio de la Ruta Gastronómica Misteriosa</strong><br>
+                            <span class="speaker">Tapas locales: zarangollo, michirones, …</span><br>
+                            <span class="speaker">Instrucciones para descubrir 4 curiosidades ocultas en Murcia</span><br>
+                            <span class="speaker">Fotografía de los elementos ocultos para concurso</span><br>
+                            <span class="speaker">Heladería o repostería local: pastel de carne / helado</span><br>
+                            <span class="speaker">Caminata final hacia el lugar del cóctel</span><br>
+                            <span class="speaker">Foto final grupal</span><br>
+                            <span class="speaker">Entrega de premio a la mejor fotografía</span>
                         </li>
 
                         <li>
-                            <strong>20:30 – Cóctel 25 Aniversario</strong><br>
-                            <span class="speaker">Photocall, música y networking</span>
+                            <strong>20:30 – Cóctel 25 Aniversario APDPE (Hotel Nelva)</strong><br>
+                            <span class="speaker">Photocall</span><br>
+                            <span class="speaker">Música y networking</span>
                         </li>
                     </ul>
                 </div>
@@ -474,59 +486,63 @@
                         <li>
                             <strong>10:00 – Mesa redonda</strong><br>
                             <span class="talk">“Las peculiaridades de la búsqueda de desaparecidos involuntarios. Principales aspectos a tener en cuenta”</span><br>
-                            <span class="speaker">-D. Teniente Coronel de la Comandancia de Murcia</span><br>
-                            <span class="speaker">-D. Antonio Suárez Yáñez</span><br>
-                            <span class="speaker">-D. Joaquín Amills</span><br>
-                            <span class="speaker">-D. Francisco Iglesias</span>
+                            <span class="speaker">-Teniente Coronel de la Comadancia de Murcia (GC)</span><br>
+                            <span class="speaker">-D. Antonio Suárez Yañez . Coronel de Seprose (GC)</span><br>
+                            <span class="speaker">-D. Joaquin Amills. Presidente SOS Desaparecidos</span><br>
+                            <span class="speaker">-D. Francisco Iglesias. Delegado APDPE Murcia</span>
                         </li>
 
-                        <li><strong>11:30 – Café / Networking</strong></li>
+                        <li><strong>11:30 – Café / networking</strong></li>
 
                         <li>
                             <strong>12:00 – Ponencia jurídica</strong><br>
-                            <span class="talk">“Evolución jurisprudencial de la prueba del detective”</span><br>
-                            <span class="speaker">-D. Representante de la Universidad de Murcia</span><br>
-                            <span class="speaker">-D. Jorge Salgueiro Rodríguez</span>
+                            <span class="talk">“Evolución jurisprudencial de la prueba del detective en los últimos años”</span><br>
+                            <span class="speaker">-Ponente: Representante de la Universidad de Murcia</span><br>
+                            <span class="speaker">-D. Jorge Salgueiro Rodríguez. Asesor de APDPE. Presidente de AECRA</span>
                         </li>
 
                         <li>
                             <strong>12:50 – Ponencia tecnológica / futuro</strong><br>
-                            <span class="talk">“Blockchain, criptoactivos y prueba digital”</span><br>
-                            <span class="speaker">-D. José Hernández</span>
+                            <span class="talk">“Blockchain, criptoactivos y prueba digital: nuevas claves para la investigación privada”</span><br>
+                            <span class="speaker">-D. José Hernández. Presidente de la Federación Nacional de Digitalización y Blockchain (FNDB)</span>
                         </li>
 
                         <li>
                             <strong>Ponencia técnica</strong><br>
-                            <span class="talk">“La problemática de la ciberseguridad en los despachos de Detectives Privados”</span><br>
-                            <span class="speaker">-D. Manuel Gallego</span><br>
-                            <span class="speaker">-D. Jonathan Pazos Rivera</span>
+                            <span class="talk">“La problematica de la ciberseguridad en los despachos de Detectives Privados”</span><br>
+                            <span class="speaker">-D. Manuel Gallego Moreno. TK Analytics Group</span><br>
+                            <span class="speaker">-D. Jonathan Pazos Rivera. TK Analytics Group</span>
                         </li>
 
                         <li>
                             <strong>13:40 – Ventana de innovación</strong><br>
                             <span class="talk">“El enigma de la servilleta: cuando la genética responde”</span><br>
-                            <span class="speaker">-Dª. Isabel Navarro</span><br>
-                            <span class="speaker">-Dª. Alicia Moré</span>
+                            <span class="speaker">-Dra. Isabel Navarro. Citogen</span><br>
+                            <span class="speaker">-Dª. Alicia Moré. Citogen</span>
                         </li>
 
                         <li>
-                            <strong>14:30 – Comida + Mesa especial</strong><br>
-                            <span class="talk">“25 años de APDPE: memoria y evolución”</span><br>
-                            <span class="speaker">-D. Antonio Labrador</span><br>
-                            <span class="speaker">-D. Francisco Casado</span><br>
-                            <span class="speaker">-D. Jorge Salgueiro Rodríguez</span>
+                            <strong>14:30 – Mesa de los “25 años de APDPE”</strong><br>
+                            <span class="talk">“Memoria y evolución de la profesión”</span><br>
+                            <span class="speaker">-D. Antonio Labrador. Presidente APDPE</span><br>
+                            <span class="speaker">-D. Francisco Casado. Presidente ATA Murcia</span><br>
+                            <span class="speaker">-D. Jorge Salgueiro Rodríguez. Asesor de APDPE. Presidente de AECRA</span>
                         </li>
 
                         <li>
                             <strong>18:00 – Clausura oficial</strong><br>
-                            <span class="speaker">-D. Antonio Labrador Barquilla</span><br>
-                            <span class="speaker">-D. Julián Sánchez Melgar</span><br>
-                            <span class="speaker">-D. Francisco Casado</span>
+                            <span class="speaker">-D. Antonio Labrador Barquilla. Presidente APDPE</span><br>
+                            <span class="speaker">-D. Julián Sánchez Melgar. Magistrado Tribunal Supremo. Ex-Fiscal General del Estado.</span><br>
+                            <span class="speaker">-D. Francisco Casado Cerrato. Presidente ATA Murcia</span><br>
+                            <span class="speaker">Conclusiones del congreso</span><br>
+                            <span class="speaker">Foto oficial</span>
                         </li>
 
                         <li>
-                            <strong>21:30 – Cena de gala</strong><br>
-                            <span class="speaker">Entrega de reconocimientos, anuncio del próximo congreso, música y networking</span>
+                            <strong>21:30 – Cena de gala 25 aniversario APDPE (Hotel Nelva)</strong><br>
+                            <span class="speaker">Entrega de reconocimientos</span><br>
+                            <span class="speaker">Anuncio del próximo congreso</span><br>
+                            <span class="speaker">Música y networking</span>
                         </li>
                     </ul>
                 </div>
@@ -541,7 +557,7 @@
                     <p class="day-subtitle">Asamblea General Ordinaria APDPE</p>
 
                     <ul class="schedule">
-                        <li><strong>10:00 – 14:00 Asamblea General APDPE</strong></li>
+                        <li><strong>10:00 – 14:00 Asamblea APDPE</strong></li>
                     </ul>
                 </div>
             </div>
