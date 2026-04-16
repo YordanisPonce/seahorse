@@ -225,7 +225,7 @@
         }
 
         ul.schedule li {
-            padding: 10px 0 10px 18px;
+            padding: 12px 0 12px 18px;
             border-bottom: 1px solid rgba(255,255,255,.08);
             position: relative;
             color: var(--text-soft);
@@ -246,8 +246,24 @@
             background: var(--accent);
             position: absolute;
             left: 0;
-            top: 17px;
+            top: 19px;
             box-shadow: 0 0 0 4px rgba(125, 179, 255, 0.12);
+        }
+
+        .talk {
+            display: inline-block;
+            margin-top: 4px;
+            color: #ffffff;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        .speaker {
+            display: inline-block;
+            margin-top: 4px;
+            color: rgba(255,255,255,.78);
+            line-height: 1.55;
+            font-size: 13px;
         }
 
         .contact-box p {
@@ -290,6 +306,10 @@
                 grid-template-columns: 1fr;
             }
 
+            .day-card.day-green {
+                grid-column: auto !important;
+            }
+
             h1 {
                 font-size: 28px;
             }
@@ -310,10 +330,7 @@
 
         <div class="header">
             <div class="logo-placeholder">
-                {{-- OPCIÓN 1: si ya tienes la imagen --}}
                 <img src="{{ asset('images/unnamed.png') }}" alt="Logo Congreso APDPE">
-
-                {{-- OPCIÓN 2: si quieres dejar el espacio temporalmente, comenta el img de arriba y usa esto --}}
                 {{--
                 <div class="logo-note">
                     Aquí va la imagen / logo del congreso
@@ -393,16 +410,59 @@
                     <p class="day-subtitle">1ª Jornada: Talento y Herramientas</p>
 
                     <ul class="schedule">
-                        <li>09:00 – Acreditaciones</li>
-                        <li>09:30 – Inauguración</li>
-                        <li>10:00 – Mesa redonda: “El detective ayer y hoy”</li>
-                        <li>11:30 – Café / Networking</li>
-                        <li>12:00 – Ponencia: “La investigación digital”</li>
-                        <li>12:50 – Innovación: “Registra todo, escribe nada”</li>
-                        <li>13:30 – Ponencia técnica</li>
-                        <li>14:30 – Comida</li>
-                        <li>16:30 – Ruta Gastronómica Misteriosa</li>
-                        <li>20:30 – Cóctel 25 Aniversario</li>
+                        <li><strong>09:00 – Acreditaciones</strong></li>
+
+                        <li>
+                            <strong>09:30 – Inauguración</strong><br>
+                            <span class="speaker">Antonio Labrador Barquilla</span><br>
+                            <span class="speaker">Francisco Lucas Ayala</span><br>
+                            <span class="speaker">Antonio José Gambín</span><br>
+                            <span class="speaker">Francisco Pulido Catalán</span><br>
+                            <span class="speaker">Jorge Salgueiro Rodríguez</span>
+                        </li>
+
+                        <li>
+                            <strong>10:00 – Mesa redonda</strong><br>
+                            <span class="talk">“El detective ayer y hoy: del oficio tradicional al entorno actual”</span><br>
+                            <span class="speaker">Francisco Iglesias</span><br>
+                            <span class="speaker">Luis Iglesias Asuar</span><br>
+                            <span class="speaker">Cristian García</span><br>
+                            <span class="speaker">Gabriel Sánchez</span><br>
+                            <span class="speaker">Javier Regidor</span>
+                        </li>
+
+                        <li><strong>11:30 – Café / Networking</strong></li>
+
+                        <li>
+                            <strong>12:00 – Ponencia</strong><br>
+                            <span class="talk">“La investigación digital”</span><br>
+                            <span class="speaker">Juan Lorenzo del Real Jiménez</span><br>
+                            <span class="speaker">Antonio Suárez Yáñez</span>
+                        </li>
+
+                        <li>
+                            <strong>12:50 – Ventana de innovación</strong><br>
+                            <span class="talk">“Registra todo, escribe nada”</span><br>
+                            <span class="speaker">Axel Toribio</span>
+                        </li>
+
+                        <li>
+                            <strong>13:30 – Ponencia técnica</strong><br>
+                            <span class="talk">“Escenario híbrido de investigación”</span><br>
+                            <span class="speaker">Fernando Mairata de Anduiza</span>
+                        </li>
+
+                        <li><strong>14:30 – Comida (Hotel Nelva)</strong></li>
+
+                        <li>
+                            <strong>16:30 – Ruta Gastronómica Misteriosa</strong><br>
+                            <span class="speaker">Degustación de tapas locales, recorrido por Murcia, concurso fotográfico, dulce típico o helado, foto grupal y premio</span>
+                        </li>
+
+                        <li>
+                            <strong>20:30 – Cóctel 25 Aniversario</strong><br>
+                            <span class="speaker">Photocall, música y networking</span>
+                        </li>
                     </ul>
                 </div>
 
@@ -416,15 +476,63 @@
                     <p class="day-subtitle">2ª Jornada: Visión Sectorial y Jurídica</p>
 
                     <ul class="schedule">
-                        <li>10:00 – Mesa redonda: desaparecidos</li>
-                        <li>11:30 – Café / Networking</li>
-                        <li>12:00 – Ponencia jurídica</li>
-                        <li>12:50 – Blockchain y prueba digital</li>
-                        <li>La problemática de la ciberseguridad en los despachos de Detectives Privados</li>
-                        <li>13:40 – Innovación genética</li>
-                        <li>14:30 – Comida + Mesa especial</li>
-                        <li>18:00 – Clausura oficial</li>
-                        <li>21:30 – Cena de gala</li>
+                        <li>
+                            <strong>10:00 – Mesa redonda</strong><br>
+                            <span class="talk">“Las peculiaridades de la búsqueda de desaparecidos involuntarios. Principales aspectos a tener en cuenta”</span><br>
+                            <span class="speaker">Guardia Civil</span><br>
+                            <span class="speaker">Antonio Suárez Yáñez</span><br>
+                            <span class="speaker">Joaquín Amills</span><br>
+                            <span class="speaker">Francisco Iglesias</span>
+                        </li>
+
+                        <li><strong>11:30 – Café / Networking</strong></li>
+
+                        <li>
+                            <strong>12:00 – Ponencia jurídica</strong><br>
+                            <span class="talk">“Evolución jurisprudencial de la prueba del detective”</span><br>
+                            <span class="speaker">Universidad de Murcia</span><br>
+                            <span class="speaker">Jorge Salgueiro Rodríguez</span>
+                        </li>
+
+                        <li>
+                            <strong>12:50 – Ponencia tecnológica / futuro</strong><br>
+                            <span class="talk">“Blockchain, criptoactivos y prueba digital”</span><br>
+                            <span class="speaker">José Hernández</span>
+                        </li>
+
+                        <li>
+                            <strong>Ponencia técnica</strong><br>
+                            <span class="talk">“La problemática de la ciberseguridad en los despachos de Detectives Privados”</span><br>
+                            <span class="speaker">Manuel Gallego</span><br>
+                            <span class="speaker">Jonathan Pazos Rivera</span>
+                        </li>
+
+                        <li>
+                            <strong>13:40 – Ventana de innovación</strong><br>
+                            <span class="talk">“El enigma de la servilleta: cuando la genética responde”</span><br>
+                            <span class="speaker">Dra. Isabel Navarro</span><br>
+                            <span class="speaker">Alicia Moré</span>
+                        </li>
+
+                        <li>
+                            <strong>14:30 – Comida + Mesa especial</strong><br>
+                            <span class="talk">“25 años de APDPE: memoria y evolución”</span><br>
+                            <span class="speaker">Antonio Labrador</span><br>
+                            <span class="speaker">Francisco Casado</span><br>
+                            <span class="speaker">Jorge Salgueiro Rodríguez</span>
+                        </li>
+
+                        <li>
+                            <strong>18:00 – Clausura oficial</strong><br>
+                            <span class="speaker">Antonio Labrador Barquilla</span><br>
+                            <span class="speaker">Julián Sánchez Melgar</span><br>
+                            <span class="speaker">Francisco Casado</span>
+                        </li>
+
+                        <li>
+                            <strong>21:30 – Cena de gala</strong><br>
+                            <span class="speaker">Entrega de reconocimientos, anuncio del próximo congreso, música y networking</span>
+                        </li>
                     </ul>
                 </div>
 
@@ -438,7 +546,7 @@
                     <p class="day-subtitle">Asamblea General Ordinaria APDPE</p>
 
                     <ul class="schedule">
-                        <li>10:00 – 14:00 Asamblea General APDPE</li>
+                        <li><strong>10:00 – 14:00 Asamblea General APDPE</strong></li>
                     </ul>
                 </div>
             </div>
