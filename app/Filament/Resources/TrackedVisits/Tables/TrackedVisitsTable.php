@@ -15,7 +15,8 @@ class TrackedVisitsTable
     {
         return $table
             ->columns([
-                TextColumn::make('id')->label('ID'),
+                TextColumn::make('index')->label('#')->rowIndex(),
+                TextColumn::make('id')->label('ID')->sortable(),
                 TextColumn::make('token')->label('Token'),
                 TextColumn::make('ip')->label('IP'),
                 TextColumn::make('method')->label('Método'),
