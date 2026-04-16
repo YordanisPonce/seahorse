@@ -331,11 +331,6 @@
         <div class="header">
             <div class="logo-placeholder">
                 <img src="{{ asset('images/unnamed.png') }}" alt="Logo Congreso APDPE">
-                {{--
-                <div class="logo-note">
-                    Aquí va la imagen / logo del congreso
-                </div>
-                --}}
             </div>
 
             <h1>XIX Congreso Anual APDPE</h1>
@@ -414,21 +409,21 @@
 
                         <li>
                             <strong>09:30 – Inauguración</strong><br>
-                            <span class="speaker">Antonio Labrador Barquilla</span><br>
-                            <span class="speaker">Francisco Lucas Ayala</span><br>
-                            <span class="speaker">Antonio José Gambín</span><br>
-                            <span class="speaker">Francisco Pulido Catalán</span><br>
-                            <span class="speaker">Jorge Salgueiro Rodríguez</span>
+                            <span class="speaker">-D. Antonio Labrador Barquilla</span><br>
+                            <span class="speaker">-D. Francisco Lucas Ayala</span><br>
+                            <span class="speaker">-D. Antonio José Gambín</span><br>
+                            <span class="speaker">-D. Francisco Pulido Catalán</span><br>
+                            <span class="speaker">-D. Jorge Salgueiro Rodríguez</span>
                         </li>
 
                         <li>
                             <strong>10:00 – Mesa redonda</strong><br>
                             <span class="talk">“El detective ayer y hoy: del oficio tradicional al entorno actual”</span><br>
-                            <span class="speaker">Francisco Iglesias</span><br>
-                            <span class="speaker">Luis Iglesias Asuar</span><br>
-                            <span class="speaker">Cristian García</span><br>
-                            <span class="speaker">Gabriel Sánchez</span><br>
-                            <span class="speaker">Javier Regidor</span>
+                            <span class="speaker">-D. Francisco Iglesias</span><br>
+                            <span class="speaker">-D. Luis Iglesias Asuar</span><br>
+                            <span class="speaker">-D. Cristian García</span><br>
+                            <span class="speaker">-D. Gabriel Sánchez</span><br>
+                            <span class="speaker">-D. Javier Regidor</span>
                         </li>
 
                         <li><strong>11:30 – Café / Networking</strong></li>
@@ -436,20 +431,20 @@
                         <li>
                             <strong>12:00 – Ponencia</strong><br>
                             <span class="talk">“La investigación digital”</span><br>
-                            <span class="speaker">Juan Lorenzo del Real Jiménez</span><br>
-                            <span class="speaker">Antonio Suárez Yáñez</span>
+                            <span class="speaker">-D. Juan Lorenzo del Real Jiménez</span><br>
+                            <span class="speaker">-D. Antonio Suárez Yáñez</span>
                         </li>
 
                         <li>
                             <strong>12:50 – Ventana de innovación</strong><br>
                             <span class="talk">“Registra todo, escribe nada”</span><br>
-                            <span class="speaker">Axel Toribio</span>
+                            <span class="speaker">-D. Axel Toribio</span>
                         </li>
 
                         <li>
                             <strong>13:30 – Ponencia técnica</strong><br>
                             <span class="talk">“Escenario híbrido de investigación”</span><br>
-                            <span class="speaker">Fernando Mairata de Anduiza</span>
+                            <span class="speaker">-D. Fernando Mairata de Anduiza</span>
                         </li>
 
                         <li><strong>14:30 – Comida (Hotel Nelva)</strong></li>
@@ -479,10 +474,10 @@
                         <li>
                             <strong>10:00 – Mesa redonda</strong><br>
                             <span class="talk">“Las peculiaridades de la búsqueda de desaparecidos involuntarios. Principales aspectos a tener en cuenta”</span><br>
-                            <span class="speaker">Guardia Civil</span><br>
-                            <span class="speaker">Antonio Suárez Yáñez</span><br>
-                            <span class="speaker">Joaquín Amills</span><br>
-                            <span class="speaker">Francisco Iglesias</span>
+                            <span class="speaker">-D. Teniente Coronel de la Comandancia de Murcia</span><br>
+                            <span class="speaker">-D. Antonio Suárez Yáñez</span><br>
+                            <span class="speaker">-D. Joaquín Amills</span><br>
+                            <span class="speaker">-D. Francisco Iglesias</span>
                         </li>
 
                         <li><strong>11:30 – Café / Networking</strong></li>
@@ -490,43 +485,43 @@
                         <li>
                             <strong>12:00 – Ponencia jurídica</strong><br>
                             <span class="talk">“Evolución jurisprudencial de la prueba del detective”</span><br>
-                            <span class="speaker">Universidad de Murcia</span><br>
-                            <span class="speaker">Jorge Salgueiro Rodríguez</span>
+                            <span class="speaker">-D. Representante de la Universidad de Murcia</span><br>
+                            <span class="speaker">-D. Jorge Salgueiro Rodríguez</span>
                         </li>
 
                         <li>
                             <strong>12:50 – Ponencia tecnológica / futuro</strong><br>
                             <span class="talk">“Blockchain, criptoactivos y prueba digital”</span><br>
-                            <span class="speaker">José Hernández</span>
+                            <span class="speaker">-D. José Hernández</span>
                         </li>
 
                         <li>
                             <strong>Ponencia técnica</strong><br>
                             <span class="talk">“La problemática de la ciberseguridad en los despachos de Detectives Privados”</span><br>
-                            <span class="speaker">Manuel Gallego</span><br>
-                            <span class="speaker">Jonathan Pazos Rivera</span>
+                            <span class="speaker">-D. Manuel Gallego</span><br>
+                            <span class="speaker">-D. Jonathan Pazos Rivera</span>
                         </li>
 
                         <li>
                             <strong>13:40 – Ventana de innovación</strong><br>
                             <span class="talk">“El enigma de la servilleta: cuando la genética responde”</span><br>
-                            <span class="speaker">Dra. Isabel Navarro</span><br>
-                            <span class="speaker">Alicia Moré</span>
+                            <span class="speaker">-Dª. Isabel Navarro</span><br>
+                            <span class="speaker">-Dª. Alicia Moré</span>
                         </li>
 
                         <li>
                             <strong>14:30 – Comida + Mesa especial</strong><br>
                             <span class="talk">“25 años de APDPE: memoria y evolución”</span><br>
-                            <span class="speaker">Antonio Labrador</span><br>
-                            <span class="speaker">Francisco Casado</span><br>
-                            <span class="speaker">Jorge Salgueiro Rodríguez</span>
+                            <span class="speaker">-D. Antonio Labrador</span><br>
+                            <span class="speaker">-D. Francisco Casado</span><br>
+                            <span class="speaker">-D. Jorge Salgueiro Rodríguez</span>
                         </li>
 
                         <li>
                             <strong>18:00 – Clausura oficial</strong><br>
-                            <span class="speaker">Antonio Labrador Barquilla</span><br>
-                            <span class="speaker">Julián Sánchez Melgar</span><br>
-                            <span class="speaker">Francisco Casado</span>
+                            <span class="speaker">-D. Antonio Labrador Barquilla</span><br>
+                            <span class="speaker">-D. Julián Sánchez Melgar</span><br>
+                            <span class="speaker">-D. Francisco Casado</span>
                         </li>
 
                         <li>
